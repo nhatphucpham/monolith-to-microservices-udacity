@@ -22,13 +22,13 @@ jobs:
             docker build -t reverseproxy ./udagram-reverseproxy
             docker build -t udagram-frontend ./udagram-frontend
 
-            docker tag udagram-api-feed phucpn/udagram-api-feed:v1
-            docker tag udagram-api-user phucpn/udagram-api-user:v1
-            docker tag reverseproxy phucpn/reverseproxy:v1
-            docker tag udagram-frontend phucpn/udagram-frontend:v1
+            docker tag udagram-api-feed phucpn/udagram-api-feed:v2
+            docker tag udagram-api-user phucpn/udagram-api-user:v2
+            docker tag reverseproxy phucpn/reverseproxy:v2
+            docker tag udagram-frontend phucpn/udagram-frontend:v2
             
             echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-            docker push phucpn/udagram-api-feed:v1
-            docker push phucpn/udagram-api-user:v1
-            docker push phucpn/reverseproxy:v1
-            docker push phucpn/udagram-frontend:v1
+            docker push phucpn/udagram-api-feed:v2
+            docker push phucpn/udagram-api-user:v2
+            docker push phucpn/reverseproxy:v2
+            docker push phucpn/udagram-frontend:v2
