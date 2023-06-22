@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       labels:
-        app: backend-feeds
+        app: backend-feedsA
     spec:
       containers:
       - name: backend-feeds
