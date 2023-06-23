@@ -3,20 +3,20 @@ kind: Deployment
 metadata:
   name: backend-feeds
   labels:
-    app: backend-feeds
+    service: backend-feeds
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: backend-feeds
+      service: backend-feeds
   template:
     metadata:
       labels:
-        app: backend-feeds
+        service: backend-feeds
     spec:
       containers:
       - name: backend-feeds
-        image: phucpn/udagram-api-feed
+        image: phucpn/udagram-api-feed:latest
         imagePullPolicy: Always
         resources:
           requests:
